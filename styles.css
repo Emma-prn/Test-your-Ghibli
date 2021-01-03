@@ -1,0 +1,194 @@
+body {
+    background: url(https://i.pinimg.com/originals/f0/4f/55/f04f5540ce12af2c8700e0806af09308.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    font-family: 'Kosugi', sans-serif;
+}
+.logo {
+    position: absolute;
+}
+#loading img {
+    border-radius: 50%;
+    animation: tourne 3s linear 0s infinite;
+    margin: auto;
+}
+h1 {
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+.hide {
+    display: none;
+}
+.box {
+    margin: auto;
+    position: relative;
+    width: 50vw;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    animation: fadeInDown 0.5s ease;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1 {
+    margin: 0;
+}
+.btn {
+    background: #109CEB;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+/***Quiz***/
+.question {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.resume {
+    margin: 10px 0;
+}
+.reponse-box {
+    margin: 10px 0;
+    height: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.answer {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    background: #221815;
+    color: white;
+    width: 35%;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: ease 0.5s;
+    animation: fadeInDown ease 0.5s;
+}
+.score {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    color: lightblue;
+}
+.save-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 15vh;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+#illu {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+.vrai::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: slideLeft ease 1s;
+}
+.faux::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: slideLeft ease 1s;
+}
+.deja-rep {
+    pointer-events: none;
+}
+/***Records***/
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+li {
+    font-size: 1.2rem;
+    transition: ease 0.5s;
+}
+/***Animation***/
+.btn:hover, .answer:hover {
+    background-color: #005091
+}
+li:hover {
+    transform: scale(1.5);
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes tourne {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+/***Responsive***/
+@media (max-width:768px){
+    .logo {
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+    #loading img {
+        width: 50%;
+    }
+    .box {
+        width: 80vw;
+    }
+    .reponse-box {
+        flex-direction: column;
+        flex-wrap: unset;
+        height: 35vh;
+    }
+    .answer {
+        width: 80%;
+    }
+}

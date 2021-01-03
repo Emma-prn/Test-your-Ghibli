@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/ghibli.png">
+    <title>Test your Ghibli</title>
+</head>
+<body>
+    <img src="img/people/ghibli.png" alt="" class="logo">
+    <div class="box" id="loading">
+        <div class="container">
+            <h1>Loading...</h1>
+            <img src=img/loader.png />
+        </div>
+    </div>
+    <div class="box hide" id="failed">Something went wrong, please reload page.</div>
+    <div class="box hide" id="deb">
+        <div class="container">
+            <h1>Do you know all about Ghibli's films ?</h1>
+            <p>
+                Welcome !<br>
+                If you, too, love Ghibli's universe and believe that you are invincible when it comes to those anime series, come, try test your knowledge !<br>
+                Will you remember all the characters, places or vehicules seen in these movies ?<br>
+                Even if you don't know the answer, pick one at random, before moving to the next question.
+            </p>
+            <aside>
+                <button id="start" class="btn">Start</button>
+                <a href="highScores.html" class="btn">High Scores</a>
+            </aside>
+        </div>
+    </div>
+    <div class="box hide" id="quiz">
+        <section id="number"></section>
+        <section id="question" class="question"></section>
+        <p id="sum" class="resume"></p>
+        <img id="illu" src="" alt="">
+        <section id="rep" class="reponse-box"></section>
+        <button id="next" class="btn" onclick=next()>Next question</button>
+    </div>
+    <div id="results" class="box hide">
+        <section id="result" class="score"></section>
+        <form action="" class="save-form">
+            <label for="username">Username :</label>
+            <input type="text" name="username" id="username">
+            <input type="submit" value="Save Score" id="save" disabled class="btn">
+        </form>
+        <button onclick="playAgain()" class="btn">Play again</button>
+    </div>
+    <script src="quiz.js"></script>
+    <script src="main_modifie.js"></script>
+    <script src="end.js"></script>
+</body>
+</html>
