@@ -183,6 +183,9 @@ li:hover {
     .box {
         width: 80vw;
     }
+    .crea {
+        text-align: center;
+    }
     .reponse-box {
         flex-direction: column;
         flex-wrap: unset;
