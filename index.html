@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
@@ -33,6 +33,7 @@
                 <button id="start" class="btn">Start</button>
                 <a href="highScores.html" class="btn">High Scores</a>
             </aside>
+            <p>Made by Emma Pernin and Julia Raybaudi</p>
         </div>
     </div>
     <div class="box hide" id="quiz">
@@ -49,11 +50,12 @@
             <label for="username">Username :</label>
             <input type="text" name="username" id="username">
             <input type="submit" value="Save Score" id="save" disabled class="btn">
+            <b id="safe"></b>
         </form>
         <button onclick="playAgain()" class="btn">Play again</button>
     </div>
-    <script src="quiz.js"></script>
-    <script src="main.js"></script>
-    <script src="end.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/end.js"></script>
 </body>
 </html>
